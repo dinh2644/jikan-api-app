@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif !important;
+}
+
+html {
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../wallpaper.jpg");
+    }
+}
+
+header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+
+    h1 {
+        color: white;
+        font-size: 60px;
+        font-weight: 800;
+
+        strong {
+            color: cyan;
+        }
+    }
+    h2 {
+        margin-top: 1rem;
+        color: white;
+    }
+}
+
+.spotLightTitle {
+    color: white;
+    text-align: center;
+}
+
+.spotLightPic {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.buttons {
+    color: white;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: url("../wood.jpg");
+    background-size: cover;
+    border: 2px solid black;
+    width: fit-content !important;
+}
+
+.attributes {
+    color: white;
+    width: fit-content;
+    margin: 0 auto !important;
+}
+
+.row .col {
+    display: flex;
+}
+
+.attributes button {
+    width: 7rem;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+}
+.discover {
+    display: flex;
+    justify-content: center;
+}
+.discoverBtn {
+    background-color: white !important;
+    width: 8rem;
+    height: 3rem;
+    border: 2px solid black !important;
+}

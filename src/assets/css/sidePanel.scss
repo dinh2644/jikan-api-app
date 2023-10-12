@@ -1,0 +1,45 @@
+/* Custom CSS to style the side panel */
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.3s;
+    background-image: url("../wood.jpg");
+    overflow-y: auto;
+}
+.side-panel.open {
+    left: 0;
+}
+
+.right-side-panel {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: right 0.3s;
+    background-image: url("../wood.jpg");
+    overflow-y: auto;
+}
+.right-side-panel.open {
+    right: 0;
+}
+
+.seenImg {
+    width: 5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+}
