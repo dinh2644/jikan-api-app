@@ -1,7 +1,7 @@
 # Web Development Project 1 - Discover Anime Content
 Submitted by: Tu Dinh
 
-This web app: Ever need a quick anime/manga recommendation? This app will help you discover titles you may be interested in. It utilizes JikanAPI, an unofficial MyAnimeList.net REST API to fetch over hundreds of titles and related data for everyone's needs. 
+This web app: Ever need a quick anime/manga recommendation? This app will help you discover titles you may be interested in. It utilizes JikanAPI, an unofficial MyAnimeList.net REST API to fetch over hundreds of titles and related data for everyone's needs. Users can filter new discoveries along their search.
 
 Time spent: **X** hours spent in total
 
