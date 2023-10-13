@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const BanPanel = ({ banList }) => {
   return (
     <>
-      <div className={`right-side-panel ${banList.length > 1 ? "open" : ""}`}>
+      <div className={`right-side-panel ${banList.length != [] ? "open" : ""}`}>
         <h1>Ban list</h1>
         <ul className="nav flex-column">
           {banList.map((item, index) => (
