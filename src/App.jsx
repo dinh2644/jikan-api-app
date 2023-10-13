@@ -55,8 +55,8 @@ const App = () => {
     setHistoryList([...historyList, { title, picture }]);
   };
 
-  const handleBanAttr = () => {
-    setBanList([...banList, { type, source, studio, airing }]);
+  const handleBanAttr = (value) => {
+    setBanList([...banList, { value }]);
   };
 
   return (

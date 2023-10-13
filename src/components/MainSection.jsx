@@ -19,20 +19,24 @@ const MainSection = ({
               <div className="row attributes mb-5 mt-4">
                 <div className="col">
                   <h2>Type</h2>
-                  <button onClick={handleBanAttr}>{type}</button>
+                  <button onClick={() => handleBanAttr(type)}>{type}</button>
                 </div>
                 <div className="col">
                   <h2>Source</h2>
-                  <button onClick={handleBanAttr}>{source}</button>
+                  <button onClick={() => handleBanAttr(source)}>
+                    {source}
+                  </button>
                 </div>
                 <div className="col">
                   <h2>Studio</h2>
-                  <button onClick={handleBanAttr}>{studio}</button>
+                  <button onClick={() => handleBanAttr(studio)}>
+                    {studio}
+                  </button>
                 </div>
                 <div className="col">
                   <h2>Airing</h2>
-                  <button onClick={handleBanAttr}>
-                    {airing ? "True" : "False"}
+                  <button onClick={() => handleBanAttr(airing)}>
+                    {String(airing)}
                   </button>
                 </div>
               </div>

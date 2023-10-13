@@ -9,10 +9,7 @@ const BanPanel = ({ banList }) => {
           {banList.map((item, index) => (
             <div key={index}>
               <li className="nav-item">
-                <button>{item.type}</button>
-                <button>{item.source}</button>
-                <button>{item.studio}</button>
-                <button>{item.airing}</button>
+                <button>{String(item.value)}</button>
               </li>
             </div>
           ))}
