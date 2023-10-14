@@ -76,6 +76,11 @@ const App = () => {
     setBanList([...banList, { value }]);
   };
 
+  const handleRemoveBannedAttr = (value) => {
+    const updatedBanList = banList.filter((item) => item.value !== value);
+    setBanList(updatedBanList);
+  };
+
   return (
     <>
       <header>
@@ -86,7 +91,10 @@ const App = () => {
         seenTitle={title}
         historyList={historyList}
       />
-      <BanPanel banList={banList} />
+      <BanPanel
+        banList={banList}
+        handleRemoveBannedAttr={handleRemoveBannedAttr}
+      />
       <div>
         <MainSection
           title={title}
