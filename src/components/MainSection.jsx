@@ -5,14 +5,13 @@ const MainSection = ({
   picture,
   type,
   source,
-  studio,
-  airing,
+  rating,
   handleDiscover,
   handleBanAttr,
 }) => {
   return (
     <>
-      <div className="container">
+      <div className={`container ${title ? null : "startmenu"}`}>
         <div className="box">
           {title ? (
             <>
@@ -28,15 +27,9 @@ const MainSection = ({
                   </button>
                 </div>
                 <div className="col">
-                  <h2>Studio</h2>
-                  <button onClick={() => handleBanAttr(studio)}>
-                    {studio}
-                  </button>
-                </div>
-                <div className="col">
-                  <h2>Airing</h2>
-                  <button onClick={() => handleBanAttr(airing)}>
-                    {String(airing)}
+                  <h2>Rating</h2>
+                  <button onClick={() => handleBanAttr(rating)}>
+                    {rating}
                   </button>
                 </div>
               </div>

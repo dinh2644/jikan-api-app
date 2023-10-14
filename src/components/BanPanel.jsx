@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const BanPanel = ({ banList }) => {
   return (
@@ -9,7 +9,7 @@ const BanPanel = ({ banList }) => {
           {banList.map((item, index) => (
             <div key={index}>
               <li className="nav-item">
-                <button>{String(item.value)}</button>
+                <button className="button-56 mb-3">{item.value}</button>
               </li>
             </div>
           ))}

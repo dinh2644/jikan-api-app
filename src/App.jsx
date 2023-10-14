@@ -13,39 +13,56 @@ const App = () => {
   const [picture, setPicture] = useState("");
   const [type, setType] = useState("");
   const [source, setSource] = useState("");
-  const [studio, setStudio] = useState("");
-  const [airing, setAiring] = useState(false);
+  const [rating, setRating] = useState(false);
   const [historyList, setHistoryList] = useState([]);
   const [banList, setBanList] = useState([]);
 
   const fetchAnime = async () => {
-    const randomNum = Math.floor(Math.random() * 1000);
-    try {
-      const response = await axios.get(
-        `https://api.jikan.moe/v4/anime/${randomNum}`
-      );
-      const animeData = response.data.data;
-      const animeTitle = animeData.title;
-      const animePic = animeData.images.jpg.image_url;
-      const animeType = animeData.type;
-      const animeSource = animeData.source;
-      const animeStudio = animeData.studios
-        .map((studio) => studio.name)
-        .join(", ");
-      const animeAiring = animeData.airing;
-      if (animeTitle != null) {
-        console.log(animeData, "FOO");
-        setTitle(animeTitle);
-        setPicture(animePic);
-        setType(animeType);
-        setSource(animeSource);
-        setStudio(animeStudio);
-        setAiring(animeAiring);
-      } else {
-        alert("null found");
+    let validData = null;
+    while (!validData) {
+      try {
+        const randomNum = Math.floor(Math.random() * 10000) + 1;
+        const response = await axios.get(
+          `https://api.jikan.moe/v4/anime/${randomNum}`
+        );
+        const animeData = response.data.data;
+        if (
+          animeData &&
+          animeData.title &&
+          animeData.images &&
+          animeData.images.jpg &&
+          animeData.images.jpg.image_url &&
+          animeData.type &&
+          animeData.source &&
+          animeData.rating
+        ) {
+          const bannedValues = new Set(banList.map((item) => item.value));
+
+          const filteredData = { ...animeData };
+          let containsBannedAttribute = false;
+
+          Object.keys(filteredData).forEach((attr) => {
+            if (bannedValues.has(filteredData[attr])) {
+              filteredData[attr] = null;
+              containsBannedAttribute = true;
+            }
+          });
+
+          if (containsBannedAttribute) {
+            continue;
+          }
+
+          setTitle(filteredData.title);
+          setPicture(filteredData.images.jpg.image_url);
+          setType(filteredData.type);
+          setSource(filteredData.source);
+          setRating(filteredData.rating);
+          console.log(filteredData);
+          validData = animeData;
+        }
+      } catch (err) {
+        console.error(err);
       }
-    } catch (err) {
-      console.error(err);
     }
   };
 
@@ -76,8 +93,7 @@ const App = () => {
           picture={picture}
           type={type}
           source={source}
-          studio={studio}
-          airing={airing}
+          rating={rating}
           handleDiscover={handleDiscover}
           handleBanAttr={handleBanAttr}
         />
