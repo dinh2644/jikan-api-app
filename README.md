@@ -33,6 +33,12 @@ Here's a walkthrough of implemented user stories:
 <a href="https://www.loom.com/share/92e6af84e71744f7b031e1bafe56ec49">
   <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/92e6af84e71744f7b031e1bafe56ec49-with-play.gif">
 </a>
+
+Additional video showing remove functionailty of banned attributes
+<a href="https://www.loom.com/share/babb3a1613aa4a2fa8ea9e38d8839636">
+  <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/babb3a1613aa4a2fa8ea9e38d8839636-with-play.gif">
+</a>
+
  
 
 <!-- Replace this with whatever GIF tool you used! -->
