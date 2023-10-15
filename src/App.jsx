@@ -21,9 +21,8 @@ const App = () => {
     let validData = null;
     while (!validData) {
       try {
-        const randomNum = Math.floor(Math.random() * 10000) + 1;
         const response = await axios.get(
-          `https://api.jikan.moe/v4/anime/${randomNum}`
+          "https://api.jikan.moe/v4/random/anime"
         );
         const animeData = response.data.data;
         if (
